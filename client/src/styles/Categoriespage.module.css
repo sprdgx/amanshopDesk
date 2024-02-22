@@ -1,0 +1,47 @@
+.container {
+  padding: 20px;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.carousel {
+  margin-bottom: 20px;
+}
+
+.filterContainer {
+  display: flex;
+  flex-wrap: wrap; /* Allow filters to wrap to the next line on smaller screens */
+  justify-content: space-between;
+}
+
+.filter {
+  margin-bottom: 20px;
+}
+
+.filterText {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.select {
+  padding: 10px;
+  font-size: 16px;
+}
+
+.carousel {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 10px; /* Adjust the border radius as needed */
+  overflow: hidden; /* Ensure the image doesn't overflow the border radius */
+}
+
+.carouselImg {
+  object-fit: cover; /* Ensure the image covers the container */
+  border-radius: 20px; /* Adjust the border radius as needed */
+}

@@ -1,0 +1,44 @@
+.wrapper {
+    text-align: center;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    font-size: 25px;
+    margin: 20px auto;
+  }
+  
+  .row {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .feature {
+    padding: 10px;
+  }
+  
+  .feature h3 {
+    font-size: 18px;
+    font-weight: 500;
+    width: fit-content;
+    margin: 0 auto !important;
+  }
+  
+  .p {
+    font-size: 15px;
+    margin-top: 20px;
+  }
+  
+  @media (max-width: 600px) {
+    .row {
+        display: block;
+        justify-content: center;
+      }
+  }

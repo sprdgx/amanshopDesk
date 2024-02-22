@@ -1,0 +1,144 @@
+/* ProductPage.module.css */
+
+.container {
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: linear-gradient(to top, rgba(0, 128, 128, 0.196), white);
+}
+
+.wrapper {
+  display: flex;
+  width: 100%;
+  gap: 20px; /* Space between carousel and details */
+  align-items: flex-start; /* Align items at the start of the flex container */
+}
+
+.imgContainer {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.image {
+  border-radius: 10px; 
+  object-fit: cover; 
+  width: 500px;
+  height: 500px;
+  margin-top: 30px;
+}
+
+.infoContainer {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.title {
+  font-size: 28px;
+  font-weight: 600;
+  margin-bottom: 15px;
+}
+
+.desc {
+  font-size: 16px;
+  margin-bottom: 15px;
+}
+.detailList{
+  font-size: 16px;
+  margin-top: 20px;
+  font-weight: 500;
+}
+
+.detailTitle{
+  font-size: 16px;
+  margin-top: 3px;
+  font-weight: 500;
+}
+
+.price {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.amountContainer {
+  display: flex;
+  align-items: center;
+}
+
+.amountContainer:hover {
+  cursor: pointer;
+}
+
+.amountContainer > * {
+  margin: 0 8px;
+  padding: 8px;
+  border-radius: 50%;
+  transition: background-color 0.3s ease;
+  font-size: 50px;
+}
+
+.amountContainer > * :hover {
+  background-color: teal;
+}
+
+.amount {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.buttonWrapper{
+  display: flex;
+}
+
+.button {
+  padding: 10px 20px;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button:hover {
+  background-color: #444; /* Darken button on hover */
+}
+
+/* Responsive Design */
+@media screen and (max-width: 768px) {
+  .wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imgContainer, .infoContainer {
+    width: 100%;
+  }
+  .image{
+    width: 330px;
+    height: 330px;
+  }
+
+  .title {
+    text-align: center;
+  }
+}
+
+/* Notification Style */
+.notification {
+  position: fixed;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #48c774;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  z-index: 1000; /* Ensure it's above other content */
+  display: none; /* Hide by default, show via JS */
+}

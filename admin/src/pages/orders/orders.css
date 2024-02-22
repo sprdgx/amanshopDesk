@@ -1,0 +1,199 @@
+.productList {
+  flex: 4;
+  padding: 20px;
+  height: 100vh;
+  width: 100vw;
+}
+
+.productListItem {
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap */
+  gap: 10px; /* Adjust the gap between products */
+  width: 300px; /* Set a maximum width for the product list */
+}
+
+.productBlock {
+  width: calc((100% - 20px) / 3); /* Calculate width for three items per row */
+  height: 100px; /* Adjust height as needed */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+}
+
+.productListimg {
+  width: 60px;
+  height: 60px;
+  border-radius: 25%;
+  object-fit: cover;
+  display: grid;
+  margin-right: 5px;
+}
+
+.productListEdit {
+  border: none;
+  border-radius: 10px;
+  padding: 5px 10px;
+  background-color: #3bb077;
+  color: white;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.productListDelete {
+  color: red;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 550px) {
+  .productList {
+    padding: 0;
+    margin-top: 50px;
+  }
+}
+
+
+.confirmed{
+  color: rgb(0, 143, 136);
+  font-size: 17px;
+}
+
+@media only screen and (max-width: 550px) {
+  .productList {
+    flex: 4;
+    padding: 0px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .productBlock {
+    flex: 1;
+    margin: 10px;
+  }
+
+  .productListItem {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+
+  .productListEdit {
+    margin-right: 0; /* Remove margin-right on small screens */
+  }
+}
+
+.confirmedbutton {
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.65rem;
+  width: 8.5em;
+  height: 3em;
+  border-radius: 1rem;
+  color: rgb(0, 128, 122);
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+ }
+ 
+ .confirmedbutton:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ .confirmedbutton:hover:not(:disabled) {
+  background: rgb(0, 128, 122);
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ .confirmedbutton:disabled {
+  cursor: auto;
+  color: grey;
+ }
+
+.confirmedbutton:hover:before {
+  transform: translateX(15em);
+}
+
+.customNotification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-out forwards, fadeOut 0.5s ease-in 2.5s forwards;
+}
+
+.deletedbutton {
+  background-color: #eee;
+  border: none;
+  padding: 0.5rem;
+  font-size: 0.65rem;
+  width: 8.5em;
+  height: 3em;
+  border-radius: 1rem;
+  color: lightcoral;
+  box-shadow: 0 0.4rem #dfd9d9;
+  cursor: pointer;
+  margin-left: 5px;
+ }
+ 
+ .deletedbutton:active {
+  color: white;
+  box-shadow: 0 0.2rem #dfd9d9;
+  transform: translateY(0.2rem);
+ }
+ 
+ .deletedbutton:hover:not(:disabled) {
+  background: lightcoral;
+  color: white;
+  text-shadow: 0 0.1rem #bcb4b4;
+ }
+ 
+ .deletedbutton:disabled {
+  cursor: auto;
+  color: grey;
+ }
+
+.deletedbutton:hover:before {
+  transform: translateX(15em);
+}
+
+.customNotification {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  animation: slideIn 0.5s ease-out forwards, fadeOut 0.5s ease-in 2.5s forwards;
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-50%) translateY(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(-50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+

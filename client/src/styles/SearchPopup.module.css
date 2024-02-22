@@ -1,0 +1,48 @@
+/* SearchPopup.module.css */
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 128, 128, 0.8); /* Teal semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's above other content */
+  }
+  
+  .popup {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Add shadow for depth */
+    animation: fadeInUp 0.3s ease; /* Fade-in animation */
+    overflow-y: auto; /* Allow vertical scrolling */
+    max-height: 70vh; /* Limit height to 70% of viewport */
+  }
+
+  .productList {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two products per row */
+    gap: 20px; /* Add gap between products */
+    margin-top: 20px; /* Add margin between the search input and the product list */
+  }  
+  
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px); /* Start animation slightly below */
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0); /* End animation at original position */
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .productList {
+      grid-template-columns: 1fr; /* Only one product per row on smaller screens */
+    }
+  }

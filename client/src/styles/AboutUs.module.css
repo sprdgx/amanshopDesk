@@ -1,0 +1,56 @@
+.aboutUsContainer {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    background-color: teal;
+    margin-top: 38px;
+    border-radius: 70px;
+  }
+  
+  .title {
+    font-size: 30px;
+    margin-bottom: 20px;
+    text-align: left;
+  }
+  
+  .description {
+    font-size: 22px;
+    text-align: left;
+  }
+  
+  .imageContainer {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .textContainer {
+    width: 50%;
+    padding-right: 20px;
+  }
+  
+  .image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 70px;
+  }
+  
+  /* Mobile Styles */
+  @media (max-width: 768px) {
+    .aboutUsContainer {
+      flex-direction: column;
+      margin-bottom: 40px;
+    }
+  
+    .textContainer {
+      width: 100%;
+      padding-right: 0;
+      text-align: left;
+      margin-bottom: 30px;
+    }
+    .image{
+        padding-bottom: 40px;
+    }
+  }
+  

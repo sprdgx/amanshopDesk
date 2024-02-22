@@ -1,0 +1,20 @@
+.container {
+    display: flex;
+    padding: 20px;
+    justify-content: space-between;
+    border-radius: 10px;
+    background-color: rgba(0, 128, 128, 0.514);
+    height: auto;
+    width: 90%;
+    margin-left: 1.4cm;
+    gap: 17px;
+  }
+  
+  @media screen and (max-width: 768px) {
+    .container {
+      padding: 10px 5px;
+      margin: 50px 10px;
+      flex-direction: column;
+    }
+  }
+  
