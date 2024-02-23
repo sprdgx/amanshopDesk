@@ -8,7 +8,7 @@ interface ProductProps {
     _id: string;
     img: string;
     title: string;
-    price: string;
+    price?: string;
   };
 }
 
