@@ -9,7 +9,6 @@ import EditCategory from '../../components/Categories/EditCategories';
 const Categories = () => {
   const [categories, setCategories] = useState([]);
   const [newCategory, setNewCategory] = useState({
-    title:'',
     cat: '',
     img: '',
     gradiantColorOne: '',
@@ -17,15 +16,18 @@ const Categories = () => {
   });
   const [editingCategory, setEditingCategory] = useState(null);
   const [isEditModalOpen, setIsEditModalOpen] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const fetchCategories = async () => {
+      setIsLoading(true);
       try {
         const response = await userRequest.get('/categories');
         setCategories(response.data);
       } catch (error) {
         console.error('Error fetching categories:', error);
       }
+      setIsLoading(false);
     };
 
     fetchCategories();
@@ -40,10 +42,8 @@ const Categories = () => {
     try {
       const response = await postNewCategory(newCategory);
       console.log('Category created successfully:', response.data);
-      // Handle success, such as displaying a success message to the user
       setCategories([...categories, response.data]);
       setNewCategory({
-        title:'',
         cat: '',
         img: '',
         gradiantColorOne: '',
@@ -51,7 +51,6 @@ const Categories = () => {
       });
     } catch (error) {
       console.error('Error creating category:', error);
-      // Handle error, such as displaying an error message to the user
     }
   };
 
@@ -95,23 +94,21 @@ const Categories = () => {
   return (
     <div className="categories-container">
       <h2>Categories</h2>
-      <ul className="categories-list">
-        {categories.map(category => (
-          <div key={category._id} className="category-item">
-            <img src={category.img} alt={category.title} className="category-image" />
-            <div className="category-title">{category.cat}</div>
-            <DeleteIcon onClick={() => handleDelete(category._id)} />
-            <EditIcon onClick={() => handleEdit(category)} />
-          </div>
-        ))}
-      </ul>
+      {isLoading ? (
+        <p>Loading categories...</p>
+      ) : (
+        <ul className="categories-list">
+          {categories.map(category => (
+            <div key={category._id} className="category-item">
+              <img src={category.img} alt='' className="category-image" />
+              <div className="category-title">{category.cat}</div>
+              <DeleteIcon onClick={() => handleDelete(category._id)} />
+              <EditIcon onClick={() => handleEdit(category)} />
+            </div>
+          ))}
+        </ul>
+      )}
       <form onSubmit={handleSubmit}>
-      <input
-          type="text"
-          placeholder="Title"
-          value={newCategory.title}
-          onChange={(e) => setNewCategory({ ...newCategory, title: e.target.value })}
-        />
         <input
           type="text"
           placeholder="Category"

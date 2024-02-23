@@ -2,7 +2,6 @@ const mongoose = require("mongoose");
 
 const CategoriesSchema = new mongoose.Schema(
   { 
-    title: {type:String,  unique:true },
     img: { type: String, required: true },
     cat: { type: String, required: true },
     gradiantColorOne:{ type: String, required: true},

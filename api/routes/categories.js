@@ -4,12 +4,11 @@ const { verifyTokenAndAdmin } = require("./verifyToken");
 
 
 // CREATE
-router.post("/", verifyTokenAndAdmin, async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    const { title,cat, img, gradiantColorOne, gradiantColorTwo } = req.body;
+    const { cat, img, gradiantColorOne, gradiantColorTwo } = req.body;
 
     const newCategory = new Category({
-      title,
       cat,
       img,
       gradiantColorOne,
@@ -23,7 +22,6 @@ router.post("/", verifyTokenAndAdmin, async (req, res) => {
     res.status(500).json({ message: "Internal server error" });
   }
 });
-
 
 
 router.get("/", async (req, res) => {

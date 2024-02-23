@@ -9,6 +9,8 @@ import Sidebar from "./Sidebar";
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 import { useRouter } from "next/router";
+import ShoppingCartOutlinedIcon from '@mui/icons-material/ShoppingCartOutlined';
+
 
 interface ProductsProps {
   sort: string;
@@ -87,7 +89,7 @@ const Products: React.FC<ProductsProps> = ({ sort }) => {
                 onClick={toggleSidebar}
                 edge="start"
               >
-                <MenuIcon style={{ color: `linear-gradient(to top, teal, gray)`, height: '65px', width: '65px' }} />
+                <MenuIcon style={{ color: `teal`, height: '65px', width: '65px' }} />
               </IconButton>
               <Sidebar isOpen={isSidebarOpen} onClose={toggleSidebar} />
             </div>
@@ -96,13 +98,13 @@ const Products: React.FC<ProductsProps> = ({ sort }) => {
                 <TextField
                   className={styles.searchInput}
                   fullWidth
-                  placeholder="Type here to search..."
+                  placeholder="Vous pouvez taper ici pour rechercher..."
                   variant="outlined"
                   size="small"
                   value={searchValue}
                   onChange={handleSearchChange}
                   InputProps={{
-                    style: { color: 'white', backgroundColor: `linear-gradient(to top, teal, gray)` },
+                    style: { color: 'black', backgroundColor: `teal` },
                   }}
                 />
               </form>
@@ -111,7 +113,9 @@ const Products: React.FC<ProductsProps> = ({ sort }) => {
           </>
         )}
       </div>
-      {loading && <div>Loading...</div>}
+      {loading && <div className={styles.Loading}>
+                    <ShoppingCartOutlinedIcon className={`${styles["loading-icon"]} ${styles.cartIcon}`}/>
+                  </div>}
       {error && <div>Error: {error}</div>}
       <div className={styles.container}>
         {!loading && !error && (

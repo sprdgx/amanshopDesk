@@ -1,64 +1,57 @@
 .container {
-    flex: 1;
-    margin: 5px;
-    min-width: 280px;
-    height: 350px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    border-radius: 20px;
+  position: relative;
+  display: inline-block;
+  margin-bottom: 20px;
+}
+
+.image {
+  display: block;
+  width: 100%; /* Ensure image fills its container */
+}
+
+.info {
+  position: absolute;
+  bottom: -100%; /* Initially hide the info */
+  left: 0;
+  width: 100%;
+  background-color: teal; /* Theme color */
+  color: white;
+  padding: 10px;
+  box-sizing: border-box;
+  transition: bottom 0.3s ease; /* Add a smooth transition for the info sliding */
+}
+
+.info h1 {
+  margin: 0;
+  font-size: 1.2rem;
+}
+
+.infoT, .infoP {
+  width: 100%; /* Make title and price width same as image width */
+}
+
+/* Animation for title and price */
+.container:hover .info {
+  bottom: 0; /* Show the info on hover */
+}
+
+/* Media Query for Mobile Responsiveness */
+@media screen and (max-width: 768px) {
+  .container {
+    margin-bottom: 10px;
+  }
+
+  .info {
+    position: static; /* Remove absolute positioning */
+    padding: 10px 0; /* Adjust padding */
+    text-align: center; /* Center align text */
   }
   
-  .container:hover .info {
-    opacity: 1;
+  .infoT, .infoP {
+    width: auto; /* Reset width */
   }
   
   .image {
-    height: 75%;
-    z-index: 2;
-    border-radius: 20px;
+    transition: none; /* Disable image transition */
   }
-  
-  .info {
-    opacity: 0;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.2);
-    z-index: 3;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.5s ease;
-    cursor: pointer;
-    border-radius: 20px;
-  }
-  
-  .icon {
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 10px;
-    transition: all 0.5s ease;
-  }
-
-  .infoT{
-
-  }
-
-  .infoP{
-    
-  }
-  
-  .icon:hover {
-    background-color: #e9f5f5;
-    transform: scale(1.1);
-  }
-  
+}

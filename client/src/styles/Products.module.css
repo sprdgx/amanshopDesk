@@ -28,6 +28,19 @@
   bottom: 20px;
 }
 
+.loading-icon {
+  animation: rotate 1s linear infinite; /* Rotate the icon continuously */
+}
+
+@keyframes rotate {
+  from {
+    transform: rotateY(0deg); /* Start rotating from 0 degrees */
+  }
+  to {
+    transform: rotateY(360deg); /* Rotate to 360 degrees */
+  }
+}
+
 
 @media screen and (max-width: 768px) {
   .container {
