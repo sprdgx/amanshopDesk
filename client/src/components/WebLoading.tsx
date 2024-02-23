@@ -8,8 +8,8 @@ const LoadingAnimation = () => {
       <div className={styles["loading-text-top"]}>
         AMANSHOP
       </div>
-      <div className={styles["loading-animation"]}>
-        <ShoppingCartOutlinedIcon className={styles["loading-icon"]} />
+      <div className={styles.loadinganimation}>
+        <ShoppingCartOutlinedIcon className={styles.loadingicon} style={{fontSize:'170px'}}/>
       </div>
     </div>
   );

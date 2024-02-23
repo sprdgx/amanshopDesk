@@ -14,7 +14,7 @@
 .loading-text-top {
   font-size: 5rem; /* Adjusted for better readability */
   color: #ffffff; /* White color */
-  padding-bottom: 2.5rem; /* Reduced padding for a more compact look */
+  padding-bottom: 1.3rem; /* Reduced padding for a more compact look */
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Subtle text shadow */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Modern font stack */
   letter-spacing: 0.1em; /* Slight letter spacing for clarity */
@@ -27,15 +27,11 @@
   color: white;
 }
 
-.loading-icon {
-  font-size: 200px;
-  padding-top: 50px;
-}
 
-.loading-animation {
+.loadinganimation {
   width: 200px;
   height: 200px;
-  font-size: 80px; /* Adjust icon size */
+  font-size: 200px; /* Adjust icon size */
   color: white; /* White color for icon */
   animation: spin 2s linear infinite; /* Apply rotation animation */
   perspective: 1000px; /* Define the perspective for 3D transformation */
@@ -59,9 +55,5 @@
   .loading-text-bottom {
     font-size: 10vw; /* Adjust font size for smaller screens */
     padding-top: 5vw; /* Adjust padding for smaller screens */
-  }
-  
-  .loading-icon {
-    font-size: 45vw; /* Adjust icon size for smaller screens */
   }
 }
