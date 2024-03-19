@@ -50,7 +50,7 @@ Welcome to Amanshop, a comprehensive ecommerce platform featuring an admin panel
 
 ## 🌐 Live Demo
 
-Experience a live demo of Amanshop [here](https://example.com).
+Experience a live demo of Amanshop [here](https://amanshopdz.com).
 
 ## 🛠️ Technologies Used
 
@@ -89,13 +89,14 @@ Experience a live demo of Amanshop [here](https://example.com).
 
 ## 📝 Getting Started
 
-1-/ To Run the project locally, follow these steps:
+Make sure To Run the Api Rest first ! and ADD .env to add from it the mongodb apikey and passwords! 
+
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/sprdgx/Asirem
-   cd /Asirem/Asirem
+   git clone https://github.com/sprdgx/amanshopDesk.git
+   cd /amanshopDesk/client
 2. Install dependencies:
 
     ```bash
@@ -103,29 +104,7 @@ Experience a live demo of Amanshop [here](https://example.com).
 3. Start the development server:
 
     ```bash
-    npm run dev
-    
-Open your browser and navigate to http://localhost:3000 or http://localhost:3001 to view the landing page.
-
-2-/ To Run the ChatBot, follow these steps : 
-
-1. Clone the repository:
-
-     ```bash
-     git clone https://github.com/sprdgx/Asirem
-     cd /Asirem/Yazbot
-     
-2. Install dependencies:
-
-    ```bash
-    npm install
-
-3. Start the development server:
-
-    ```bash
-    node combines.js
-
-Your server will be available at http://localhost:3000. Make sure to keep it running to use the YazBot and access the landing page. 
+    npm run dev    
 
 
 📄 License
