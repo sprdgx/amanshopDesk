@@ -10,6 +10,12 @@ Welcome to Amanshop, a comprehensive ecommerce platform featuring an admin panel
 
 ### Client-Side (Next.js)
 
+<div align="center">
+  <img src="https://github.com/sprdgx/WebGifs/raw/main/Amanshop.gif" alt="Spuseum GIF 1" width="450px" style="display: inline-block; margin-right: 20px;" />
+  <img src="https://github.com/sprdgx/WebGifs/raw/main/Amanshop2.gif" alt="Spuseum GIF 2" width="450px" style="display: inline-block;" />
+  <img src="https://github.com/sprdgx/WebGifs/raw/main/Amanshop3.gif" alt="Spuseum GIF 2" width="450px" style="display: inline-block;" />
+</div>
+
 - User-friendly interface for browsing and purchasing products
 - Secure payment gateway integration
 - Responsive design for mobile and desktop devices
@@ -19,6 +25,11 @@ Welcome to Amanshop, a comprehensive ecommerce platform featuring an admin panel
 - Real-time notifications for order updates
 
 ### Admin Panel
+
+<div align="center">
+  <img src="https://github.com/sprdgx/WebGifs/raw/main/AmanshopAM.gif" alt="Spuseum GIF 1" width="450px" style="display: inline-block; margin-right: 20px;" />
+  <img src="https://github.com/sprdgx/WebGifs/raw/main/AmanshopAM2.gif" alt="Spuseum GIF 2" width="450px" style="display: inline-block;" />
+</div>
 
 - Dashboard with analytics and insights using Recharts
 - Product management: add, edit, and delete products
@@ -76,12 +87,47 @@ Experience a live demo of Amanshop [here](https://example.com).
 - Dotenv: Library for loading environment variables from a .env file.
 - Multer: Middleware for handling file uploads.
 
-## 🏁 Getting Started
+## 📝 Getting Started
 
-To run Amanshop locally, follow these steps:
+1-/ To Run the project locally, follow these steps:
 
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/your-username/amanshop.git
-   cd amanshop
+   git clone https://github.com/sprdgx/Asirem
+   cd /Asirem/Asirem
+2. Install dependencies:
+
+    ```bash
+    npm install
+3. Start the development server:
+
+    ```bash
+    npm run dev
+    
+Open your browser and navigate to http://localhost:3000 or http://localhost:3001 to view the landing page.
+
+2-/ To Run the ChatBot, follow these steps : 
+
+1. Clone the repository:
+
+     ```bash
+     git clone https://github.com/sprdgx/Asirem
+     cd /Asirem/Yazbot
+     
+2. Install dependencies:
+
+    ```bash
+    npm install
+
+3. Start the development server:
+
+    ```bash
+    node combines.js
+
+Your server will be available at http://localhost:3000. Make sure to keep it running to use the YazBot and access the landing page. 
+
+
+📄 License
+This project is licensed under the MIT License.
+
